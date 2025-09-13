@@ -26,10 +26,31 @@ class ProjectDetail extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),),
         Responsive.isMobile(context) ?  const SizedBox(height: defaultPadding/2,) : const SizedBox(height: defaultPadding,),
-        Text(projectList[index].description,style: const TextStyle(color: Colors.grey,height: 1.5),maxLines: size.width>700 && size.width< 750 ? 3:  size.width<470  ? 2  : size.width>600 && size.width<700 ?     6:  size.width>900 && size.width <1060 ? 6: 4 ,overflow: TextOverflow.ellipsis,),
-        const Spacer(),
-        ProjectLinks(index: index,),
-        const SizedBox(height: defaultPadding/2,),
+        Flexible(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: projectList[index].bulletPoints.map((point) => Padding(
+              padding: const EdgeInsets.only(bottom: 4.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(top: 2.0),
+                    child: Text('• ', style: TextStyle(color: Colors.amber, fontSize: 14)),
+                  ),
+                  Expanded(
+                    child: Text(
+                      point,
+                      style: const TextStyle(color: Colors.grey, height: 1.2, fontSize: 11),
+                      overflow: TextOverflow.visible,
+                      softWrap: true,
+                    ),
+                  ),
+                ],
+              ),
+            )).toList(),
+          ),
+        ),
       ],
     );
   }

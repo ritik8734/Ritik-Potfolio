@@ -14,11 +14,12 @@ class IntroBody extends StatelessWidget {
     var size = MediaQuery.sizeOf(context);
     return Row(
       children: [
-        SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
               if (!Responsive.isDesktop(context))
                 SizedBox(
                   height: size.height * 0.06,
@@ -61,7 +62,8 @@ class IntroBody extends StatelessWidget {
                 height: defaultPadding * 2,
               ),
               const DownloadButton(),
-            ],
+              ],
+            ),
           ),
         ),
         const Spacer(),

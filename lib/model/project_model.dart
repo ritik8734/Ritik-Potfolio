@@ -3,55 +3,141 @@ class Project {
   final String description;
   final String image;
   final String link;
-  Project(this.name, this.description, this.image, this.link);
+  final List<String> bulletPoints;
+  Project(this.name, this.description, this.image, this.link, this.bulletPoints);
 }
 
 List<Project> projectList = [
   Project(
-    'Coffee Application',
-    'Presenting "Coffee" - a Flutter UI application that invites you to indulge in a delightful coffee adventure. Immerse yourself in the world of rich aroma and flavor as you browse through an exquisite selection of specialty coffees. With a user-friendly interface, exploring different blends and discovering their unique details becomes a delightful experience.',
+    'Khan Global Studies Education App',
+    'Comprehensive education platform with advanced video streaming and payment integration',
     'assets/images/coffee.png',
-    'https://github.com/Hamad-Anwar/Coffe-Shop-Beautifull-UI',
+    'https://www.khanglobalstudies.com',
+    [
+      'Custom video player with offline playback capabilities',
+      'Adaptive quality streaming for optimal user experience',
+      'Integrated Cashfree/Razorpay payment gateways',
+      'Complex quiz modules with sectional timers',
+      'Secure wallet top-up and course purchase system',
+      'Real-time progress tracking and analytics'
+    ],
   ),
   Project(
-    'Car Controller Application UI',
-    'Car Control Dashboard is a user-friendly mobile application built using Flutter and powered by GetX for efficient state management. Enjoy a modern and intuitive design that adapts to various screen sizes, Interact with dynamic car controls, including speed, steering, and temperature. Realistic animations enhance the visual appeal, making it feel like you are controlling a real car!',
+    'PartyWitty Event Management App',
+    'Event management platform for booking beverages and dinner services',
     'assets/images/car.png',
-    'https://github.com/Hamad-Anwar/Car-Controller-Getx-Flutter',
+    'https://www.partywitty.com',
+    [
+      'Smooth checkout process for event bookings',
+      'Multiple payment gateway integration',
+      'User-friendly UI/UX for booking and browsing',
+      'Real-time order tracking system',
+      'Beverage and dinner service management',
+      'Secure transaction processing'
+    ],
   ),
   Project(
-      'Neumorphic Clockify',
-      'Neumorphic TimeKit is an open-source project that brings together the elegance of a beautifully designed alarm system, an analog clock with a neumorphic touch, and a feature-rich stopwatch. Whether you\'re looking for a functional alarm tool, a stylish desktop clock, or a precise stopwatch, TimeKit has you covered.',
+      'HLS Video Player with hls_proplayer',
+      'Advanced video streaming solution with HLS support and custom controls',
       'assets/images/alarm.jpg',
-      'https://github.com/Hamad-Anwar/Neumorphic-Analog-Clockify'),
+      'https://pub.dev/packages/hls_proplayer',
+      [
+        'HLS (.m3u8) live and recorded stream support',
+        'Video quality switching and adaptive streaming',
+        'Custom controls and UI customization',
+        'Playback speed control and fullscreen handling',
+        'Offline MP4 playback with zoom support',
+        'Token authentication for secure streaming'
+      ]),
   Project(
-      'CUI Aider',
-      'CUI AIDER is an extraordinary application that brings together augmented reality (AR), a robust student portal, intuitive class management, and a comprehensive GPA system, providing an all-encompassing solution for students.Using AR technology, CUI AIDER offers an immersive experience, allowing users to explore the complete university campus virtually. Through AR, students can visualize buildings, navigate with interactive directions, and gain a better understanding of their surroundings.',
-      'assets/images/cui.png',
-      'https://github.com/Hamad-Anwar/'),
-  Project(
-      'Flutter Music Streaming Application',
-      'A Flutter music streaming application that allows users to play audio files from local storage. The app features a beautiful neumorphic UI design and provides a smooth user experience for browsing and playing music.',
+      'Custom Flutter Plugin - pub.dev',
+      'Published Flutter plugin demonstrating advanced development skills',
       'assets/images/player.png',
-      'https://github.com/Hamad-Anwar/Neumorphic-Music_Player-Flutter'),
+      'https://pub.dev/packages',
+      [
+        'Created reusable Flutter plugin for developers',
+        'Published on pub.dev with proper documentation',
+        'Advanced Dart programming and package management',
+        'Adherence to pub.dev publishing standards',
+        'Open source contribution to Flutter community',
+        'Comprehensive testing and version management'
+      ]),
   Project(
-      'Food Recipe App',
-      'This repository contains a Flutter implementation of a Food Recipe app with a captivating introduction section and impressive animations. It also features a signup and signin page with animations, elegantly presented on a bottom sheet.',
+      'Payment Gateway Integration',
+      'Comprehensive payment solution supporting multiple gateways',
+      'assets/images/cui.png',
+      'https://github.com/ritikkumar4005086',
+      [
+        'Multiple payment gateway integration (Cashfree, Razorpay)',
+        'Secure wallet top-up and course purchases',
+        'Subscription management system',
+        'Payment history and transaction tracking',
+        'Refund handling and dispute management',
+        'Advanced security and fraud prevention'
+      ]),
+  Project(
+      'Quiz Management System',
+      'Dynamic quiz platform with advanced scoring and analytics',
+      'assets/images/player.png',
+      'https://github.com/ritikkumar4005086',
+      [
+        'Sectional timers and scoring logic',
+        'Real-time leaderboard functionality',
+        'NestJS and MongoDB backend integration',
+        'Real-time scoring and progress tracking',
+        'Comprehensive analytics and reporting',
+        'User performance insights and statistics'
+      ]),
+  Project(
+      'NestJS Backend APIs',
+      'Robust backend services with authentication and payment processing',
       'assets/images/recipe.png',
-      'https://github.com/Hamad-Anwar/Food-Recipe-App-Flutter'),
+      'https://github.com/ritikkumar4005086',
+      [
+        'NestJS framework with MongoDB integration',
+        'Authentication and authorization services',
+        'Payment processing and quiz management APIs',
+        'RESTful API design with proper error handling',
+        'Input validation and security measures',
+        'Cross-functional team collaboration'
+      ]),
   Project(
-      'Task Sync Pro',
-      'Welcome to the Beautiful Task Scheduler App repository! This Flutter-based task management application combines elegant design with a robust backend, ensuring a seamless and organized task management experience. From stunning UI to real-time synchronization, this app has you covered.',
+      'Cross-Platform Mobile Apps',
+      'High-performance mobile applications with modern architecture',
       'assets/images/task.png',
-      'https://github.com/Hamad-Anwar/Task-Sync-Pro-Flutter'),
+      'https://github.com/ritikkumar4005086',
+      [
+        'Flutter with Bloc/GetX state management',
+        'Responsive design for various screen sizes',
+        'Clean architecture and code organization',
+        'Performance optimization and memory management',
+        'End-to-end product delivery',
+        'Cross-platform compatibility'
+      ]),
   Project(
-      'Flutter Chat Application with Firebase',
-      'Welcome to our innovative Flutter chat application! This feature-rich messaging platform allows users to connect and communicate seamlessly through text and images. The app is built using Flutter for the frontend and integrates with Firebase for backend services, including authentication, real-time database, and storage.',
+      'Jetpack Compose Android Apps',
+      'Native Android applications with modern UI development',
       'assets/images/chat.png',
-      'https://github.com/Hamad-Anwar/Messenger-App-Backend-Firebase'),
+      'https://github.com/ritikkumar4005086',
+      [
+        'Jetpack Compose for modern UI development',
+        'Material Design principles implementation',
+        'Smooth and responsive user interfaces',
+        'Performance optimization techniques',
+        'Native Android development best practices',
+        'Modern Android architecture patterns'
+      ]),
   Project(
-      'Doctor Appointment Application',
-      'Introducing the extraordinary "Doctor Appointment System" - a state-of-the-art Flutter UI application that redefines healthcare accessibility and efficiency. Seamlessly crafted, this app empowers users to effortlessly select doctors based on categories, engage in smooth messaging, and access detailed profiles.',
+      'Event Booking Platform',
+      'Comprehensive event management with booking and payment processing',
       'assets/images/doctor.png',
-      'https://github.com/Hamad-Anwar/Doctor-Appointment-Application-UI'),
+      'https://github.com/ritikkumar4005086',
+      [
+        'Event booking flows for beverages and dinner services',
+        'User authentication and profile management',
+        'Booking management and scheduling system',
+        'Payment processing and order tracking',
+        'Flutter frontend with backend integration',
+        'Real-time notifications and updates'
+      ]),
 ];

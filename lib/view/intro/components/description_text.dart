@@ -13,11 +13,20 @@ class AnimatedDescriptionText extends StatelessWidget {
       tween: Tween(begin: start, end: end),
       duration: const Duration(milliseconds: 200),
       builder: (context, value, child) {
-        return Text(
-          'I\'m capable of creating excellent mobile apps, handling${Responsive.isLargeMobile(context) ? '\n' : ''}every step from ${!Responsive.isLargeMobile(context) ? '\n' : ''}concept to deployment.',
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(color: Colors.grey, wordSpacing: 2, fontSize: value),
+        return Container(
+          width: double.infinity,
+          child: Text(
+            'Full Stack Flutter Developer with 3 years of experience specializing in cross-platform development, backend APIs, and database management. Skilled in building high-performance, user-friendly apps with Bloc/GetX state management, NestJS backend development, MongoDB integration, payment gateways, and video streaming.',
+            maxLines: Responsive.isMobile(context) ? 3 : 2,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              color: Colors.grey, 
+              wordSpacing: 1.5, 
+              fontSize: value,
+              height: 1.4,
+            ),
+          ),
         );
       },
     );

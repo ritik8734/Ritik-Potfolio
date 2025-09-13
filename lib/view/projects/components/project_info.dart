@@ -17,7 +17,7 @@ class ProjectStack extends StatelessWidget {
         controller.onHover(index, value);
       },
       onTap: () {
-        ImageViewer(context,projectList[index].image);
+        // ImageViewer(context,projectList[index].image);
       },
       borderRadius: BorderRadius.circular(30),
       child: AnimatedContainer(
@@ -26,7 +26,9 @@ class ProjectStack extends StatelessWidget {
               borderRadius: BorderRadius.circular(30),
               color: bgColor),
           duration: const Duration(milliseconds: 500),
-          child: ProjectDetail(index: index,),
+          child: ClipRect(
+            child: ProjectDetail(index: index,),
+          ),
       ),
     );
   }
